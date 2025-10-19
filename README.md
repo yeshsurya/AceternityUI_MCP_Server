@@ -12,7 +12,17 @@ This MCP server allows AI assistants to:
 
 ## Installation
 
+### Option 1: Install from npm (Recommended)
+
 ```bash
+npm install -g aceternity-ui-mcp-server
+```
+
+### Option 2: Install from source
+
+```bash
+git clone https://github.com/yeshsurya/AceternityUI_MCP_Server.git
+cd AceternityUI_MCP_Server
 npm install
 npm run build
 ```
@@ -20,6 +30,14 @@ npm run build
 ## Usage
 
 ### Running the Server
+
+If installed globally via npm:
+
+```bash
+aceternity-ui-mcp-server
+```
+
+If installed from source:
 
 ```bash
 npm start
@@ -57,7 +75,18 @@ Add to your Claude Desktop configuration file:
 ### Windows
 `%APPDATA%\Claude\claude_desktop_config.json`
 
-Configuration:
+### If installed via npm (recommended):
+```json
+{
+  "mcpServers": {
+    "aceternity-ui": {
+      "command": "aceternity-ui-mcp-server"
+    }
+  }
+}
+```
+
+### If installed from source:
 ```json
 {
   "mcpServers": {
@@ -69,16 +98,7 @@ Configuration:
 }
 ```
 
-Or if installed globally:
-```json
-{
-  "mcpServers": {
-    "aceternity-ui": {
-      "command": "aceternity-ui-mcp-server"
-    }
-  }
-}
-```
+Note: On macOS/Linux, use forward slashes in paths. On Windows, use double backslashes.
 
 ## Available Tools
 

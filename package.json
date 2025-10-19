@@ -1,5 +1,5 @@
 {
-  "name": "@aceternity/aceternity-ui-mcp-server",
+  "name": "aceternity-ui-mcp-server",
   "version": "1.0.0",
   "description": "MCP server for Aceternity UI component library",
   "type": "module",
@@ -23,10 +23,25 @@
     "ui",
     "components",
     "react",
-    "tailwind"
+    "tailwind",
+    "mcp-server",
+    "model-context-protocol"
   ],
-  "author": "",
+  "author": "yeshsurya",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yeshsurya/AceternityUI_MCP_Server.git"
+  },
+  "bugs": {
+    "url": "https://github.com/yeshsurya/AceternityUI_MCP_Server/issues"
+  },
+  "homepage": "https://github.com/yeshsurya/AceternityUI_MCP_Server#readme",
+  "files": [
+    "build",
+    "README.md",
+    "LICENSE"
+  ],
   "dependencies": {
     "@modelcontextprotocol/sdk": "^1.16.0",
     "axios": "^1.8.4",
