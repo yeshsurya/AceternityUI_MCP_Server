@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "aceternity-ui": {
+      "command": "aceternity-ui-mcp-server",
+      "type": "stdio"
+    }
+  }
+}

@@ -100,6 +100,102 @@ Add to your Claude Desktop configuration file:
 
 Note: On macOS/Linux, use forward slashes in paths. On Windows, use double backslashes.
 
+## Configuration with GitHub Copilot CLI
+
+GitHub Copilot CLI now supports MCP servers! You can add this server to your Copilot CLI configuration.
+
+### Configuration File Location
+
+The MCP configuration file is located at:
+- **macOS/Linux**: `~/.config/mcp-config.json`
+- **Windows**: `%USERPROFILE%\.config\mcp-config.json`
+
+You can change this location by setting the `XDG_CONFIG_HOME` environment variable.
+
+### Method 1: Interactive Configuration (Recommended)
+
+1. Install the server globally:
+   ```bash
+   npm install -g aceternity-ui-mcp-server
+   ```
+
+2. Open GitHub Copilot CLI and add the server interactively:
+   ```bash
+   gh copilot
+   ```
+
+3. Use the interactive UI to add a new MCP server:
+   - Press the appropriate key to add a server
+   - Fill in the server details:
+     - **Name**: `aceternity-ui`
+     - **Command**: `aceternity-ui-mcp-server`
+     - **Type**: `stdio`
+   - Press `Ctrl+S` to save
+
+### Method 2: Manual Configuration
+
+Edit your `mcp-config.json` file manually:
+
+```json
+{
+  "mcpServers": {
+    "aceternity-ui": {
+      "command": "aceternity-ui-mcp-server",
+      "type": "stdio"
+    }
+  }
+}
+```
+
+Or if installed from source:
+
+```json
+{
+  "mcpServers": {
+    "aceternity-ui": {
+      "command": "node",
+      "args": ["/path/to/aceternity_ui_mcp/build/index.js"],
+      "type": "stdio"
+    }
+  }
+}
+```
+
+### Verifying the Configuration
+
+After configuration, restart GitHub Copilot CLI. The Aceternity UI MCP server should now be available, and you can ask Copilot questions like:
+- "List all Aceternity UI background components"
+- "Show me the background-beams component"
+- "Search for animation components in Aceternity UI"
+
+## Configuration with VS Code
+
+If you're using VS Code with GitHub Copilot, you can also configure MCP servers:
+
+1. Open VS Code Settings (JSON)
+2. Add the MCP server configuration:
+
+```json
+{
+  "github.copilot.chat.mcp.servers": {
+    "aceternity-ui": {
+      "command": "aceternity-ui-mcp-server",
+      "type": "stdio"
+    }
+  }
+}
+```
+
+3. Restart VS Code or reload the window
+
+### Example Configuration Files
+
+Example configuration files are provided in this repository:
+- `claude_desktop_config.example.json` - Claude Desktop configuration
+- `copilot_cli_config.example.json` - GitHub Copilot CLI configuration
+
+You can copy these files and modify them to match your installation path.
+
 ## Available Tools
 
 ### 1. `get_component`

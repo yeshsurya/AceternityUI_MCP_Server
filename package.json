@@ -1,6 +1,6 @@
 {
   "name": "aceternity-ui-mcp-server",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "MCP server for Aceternity UI component library",
   "type": "module",
   "main": "./build/index.js",
@@ -40,7 +40,9 @@
   "files": [
     "build",
     "README.md",
-    "LICENSE"
+    "LICENSE",
+    "claude_desktop_config.example.json",
+    "copilot_cli_config.example.json"
   ],
   "dependencies": {
     "@modelcontextprotocol/sdk": "^1.16.0",
