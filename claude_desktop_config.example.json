@@ -1,0 +1,11 @@
+{
+  "mcpServers": {
+    "aceternity-ui": {
+      "command": "node",
+      "args": ["C:\\gitRepos\\aceternity_ui_mcp\\build\\index.js"],
+      "env": {
+        "LOG_LEVEL": "info"
+      }
+    }
+  }
+}
